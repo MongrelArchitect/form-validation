@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Page Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Form Validation</title>
   </head>
   <body>
+    <div class="container">
+      <form novalidate>
+        <div>
+          <label for="email">
+            <span>Email address *</span>
+            <input type="email" id="email" name="email" required />
+            <span class="error" aria-live="polite"
+              >Some error message here</span
+            >
+          </label>
+        </div>
+
+        <div>
+          <label for="country">
+            <span>Country</span>
+            <input
+              type="text"
+              id="country"
+              name="country"
+              minlength="4"
+              maxlength="56"
+            />
+            <span class="error" aria-live="polite"
+              >Some error message here</span
+            >
+          </label>
+        </div>
+
+        <div>
+          <label for="postal">
+            <span>Postal Code</span>
+            <input
+              type="text"
+              id="postal"
+              name="postal"
+            />
+            <span class="error" aria-live="polite"
+              >Some error message here</span
+            >
+          </label>
+        </div>
+
+        <div>
+          <label for="password">
+            <span>Password (8 character minimum) *</span>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+            />
+            <span class="error" aria-live="polite"
+              >Some error message here</span
+            >
+          </label>
+        </div>
+
+        <div>
+          <label for="pass-confirm">
+            <span>Confirm Password *</span>
+            <input
+              type="password"
+              id="pass-confirm"
+              name="pass-confirm"
+              required
+              minlength="8"
+            />
+            <span class="error" aria-live="polite"
+              >Some error message here</span
+            >
+          </label>
+        </div>
+
+        <button>SUBMIT</button>
+        <span>Fields marked with * are required</span>
+
+      </form>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
