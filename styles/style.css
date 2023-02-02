@@ -31,9 +31,23 @@ form > span {
 }
 
 input {
+  border: 1px solid #333;
   font-size: inherit;
   padding: 4px;
 }
+
+input:valid {
+  background: #efe;
+}
+
+input:invalid {
+  background: #fcc;
+}
+
+input:placeholder-shown {
+  background: #fff;
+}
+
 
 label {
   display: flex;
@@ -42,7 +56,7 @@ label {
 }
 
 .container {
-  background: #efe;
+  background: #fef;
   margin: auto;
   padding: 16px;
   width: 100%;
@@ -53,5 +67,11 @@ label {
   background: #900;
   color: #eee;
   padding: 8px;
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.error.visible {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }

@@ -13,7 +13,13 @@
         <div>
           <label for="email">
             <span>Email address *</span>
-            <input type="email" id="email" name="email" required />
+            <input
+              placeholder=" "
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
             <span class="error" aria-live="polite"
               >Some error message here</span
             >
@@ -24,6 +30,7 @@
           <label for="country">
             <span>Country</span>
             <input
+              placeholder=" "
               type="text"
               id="country"
               name="country"
@@ -39,11 +46,7 @@
         <div>
           <label for="postal">
             <span>Postal Code</span>
-            <input
-              type="text"
-              id="postal"
-              name="postal"
-            />
+            <input placeholder=" " type="text" id="postal" name="postal" />
             <span class="error" aria-live="polite"
               >Some error message here</span
             >
@@ -54,6 +57,7 @@
           <label for="password">
             <span>Password (8 character minimum) *</span>
             <input
+              placeholder=" "
               type="password"
               id="password"
               name="password"
@@ -70,6 +74,7 @@
           <label for="pass-confirm">
             <span>Confirm Password *</span>
             <input
+              placeholder=" "
               type="password"
               id="pass-confirm"
               name="pass-confirm"
@@ -84,7 +89,6 @@
 
         <button>SUBMIT</button>
         <span>Fields marked with * are required</span>
-
       </form>
     </div>
     <script src="./script.js"></script>
